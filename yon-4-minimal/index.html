@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="tr" data-lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Akademi · Minimal & Net</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="loader" id="loader"><div class="loader-line-h"></div><div class="loader-counter-big"><span id="loaderCount">0</span><i>/100</i></div><div class="loader-tag-l">akademi · 01</div><div class="loader-tag-r">26 · 05 · 2026</div></div>
+<div class="scroll-progress" id="scrollProgress"></div>
+<div class="bg-grid"></div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">akademi</a>
+    <nav class="nav-links">
+      <a href="index.html" class="active"><span data-tr>Anasayfa</span><span data-en>Home</span></a>
+      <a href="egitim.html"><span data-tr>Eğitimler</span><span data-en>Trainings</span></a>
+      <a href="galeri.html"><span data-tr>Galeri</span><span data-en>Gallery</span></a>
+      <a href="#etkinlikler"><span data-tr>Etkinlikler</span><span data-en>Events</span></a>
+    </nav>
+    <div class="nav-actions">
+      <div class="lang-toggle">
+        <button data-set-lang="tr">TR</button>
+        <button data-set-lang="en">EN</button>
+      </div>
+      <a href="egitim.html#basvuru" class="nav-cta"><span data-tr>Başvur</span><span data-en>Apply</span> →</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero container">
+  <div class="label-num reveal">
+    <span><span data-tr>Anasayfa · 01</span><span data-en>Home · 01</span></span>
+    <span data-tr>Bahar 2026 · Yeni dönem</span><span data-en>Spring 2026 · New term</span>
+  </div>
+  <h1 class="reveal stagger-text">
+    <span data-tr>Az şey, <strong>çok</strong> anlam.</span>
+    <span data-en>Less, <strong>more</strong> meaning.</span>
+  </h1>
+  <div class="hero-grid reveal">
+    <p data-tr>Akademik kalitenin temel alındığı, sade ve odaklanmış bir öğrenme deneyimi. 10+ yıllık deneyim, 1.200+ mezun, gerçek vakalar.</p>
+    <p data-en>A simple, focused learning experience grounded in academic quality. 10+ years of experience, 1,200+ graduates, real cases.</p>
+    <div class="hero-actions">
+      <a href="egitim.html" class="btn"><span data-tr>Eğitimleri Gör</span><span data-en>See Programs</span> <span class="arr">→</span></a>
+      <a href="#video" class="btn-outline"><span data-tr>Tanıtım</span><span data-en>Intro</span> <span class="arr">↗</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="stats-bar container reveal">
+  <div class="stats-grid">
+    <div class="stat">
+      <div class="num"><span>1.</span>200+</div>
+      <div class="label"><span data-tr>Mezun öğrenci</span><span data-en>Graduate students</span></div>
+    </div>
+    <div class="stat">
+      <div class="num"><span>50</span>+</div>
+      <div class="label"><span data-tr>Eğitim programı</span><span data-en>Training programs</span></div>
+    </div>
+    <div class="stat">
+      <div class="num"><span>25</span></div>
+      <div class="label"><span data-tr>Uzman eğitmen</span><span data-en>Expert instructors</span></div>
+    </div>
+    <div class="stat">
+      <div class="num"><span>10</span></div>
+      <div class="label"><span data-tr>Yıllık deneyim</span><span data-en>Years of experience</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="container">
+  <div class="sec-head reveal">
+    <div>
+      <span class="label-num"><span data-tr>02 · Programlar</span><span data-en>02 · Programs</span></span>
+      <h2><span data-tr>Yaklaşan eğitimler.</span><span data-en>Upcoming programs.</span></h2>
+    </div>
+    <a href="egitim.html" class="all"><span data-tr>Tümünü gör</span><span data-en>View all</span> <span class="arr">→</span></a>
+  </div>
+</section>
+
+<section class="trainings-section">
+  <div class="container">
+    <div class="trainings-grid">
+      <a href="egitim.html" class="train-card reveal">
+        <div class="num">01.</div>
+        <h3><span data-tr>Liderlik & Yönetim</span><span data-en>Leadership & Management</span></h3>
+        <p data-tr>Yönetici adaylarına özel 12 haftalık sertifika programı.</p>
+        <p data-en>A 12-week certificate program for aspiring executives.</p>
+        <div class="train-foot">
+          <span><span data-tr>12 hafta · Hibrit</span><span data-en>12 weeks · Hybrid</span></span>
+          <strong><span data-tr>İncele</span><span data-en>Explore</span> <span class="arr">→</span></strong>
+        </div>
+      </a>
+      <a href="egitim.html" class="train-card reveal">
+        <div class="num">02.</div>
+        <h3><span data-tr>Dijital Pazarlama</span><span data-en>Digital Marketing</span></h3>
+        <p data-tr>SEO, sosyal medya ve performans pazarlama bütünsel program.</p>
+        <p data-en>SEO, social media, performance marketing — holistic program.</p>
+        <div class="train-foot">
+          <span><span data-tr>8 hafta · Online</span><span data-en>8 weeks · Online</span></span>
+          <strong><span data-tr>İncele</span><span data-en>Explore</span> <span class="arr">→</span></strong>
+        </div>
+      </a>
+      <a href="egitim.html" class="train-card reveal">
+        <div class="num">03.</div>
+        <h3><span data-tr>Finans & Muhasebe</span><span data-en>Finance & Accounting</span></h3>
+        <p data-tr>Temelden ileri seviyeye finans ve muhasebe eğitimi.</p>
+        <p data-en>Finance and accounting training from basic to advanced.</p>
+        <div class="train-foot">
+          <span><span data-tr>10 hafta · Yüz yüze</span><span data-en>10 weeks · In-person</span></span>
+          <strong><span data-tr>İncele</span><span data-en>Explore</span> <span class="arr">→</span></strong>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="about-section">
+  <div class="about-grid">
+    <div class="about-img reveal"></div>
+    <div class="about-text reveal">
+      <span class="label-num"><span data-tr>03 · Hakkımızda</span><span data-en>03 · About</span></span>
+      <h2><span data-tr>Bilgi <strong>paylaşılınca</strong> büyür.</span><span data-en>Knowledge <strong>grows</strong> when shared.</span></h2>
+      <p data-tr><strong>10 yılı aşkın akademik deneyim.</strong> Bireylerin ve kurumların gelişim yolculuğuna eşlik ediyoruz. Her programımız sektörün en deneyimli isimleriyle birlikte tasarlanır, gerçek vakalarla zenginleştirilir.</p>
+      <p data-en><strong>Over a decade of academic experience.</strong> We accompany individuals and organizations on their growth journey. Each program is designed with the industry's most experienced names.</p>
+      <p data-tr>1.200'ü aşkın mezunumuz bugün önemli pozisyonlarda görev yapıyor.</p>
+      <p data-en>Over 1,200 graduates hold important positions today.</p>
+      <div style="margin-top: 32px;">
+        <a href="#" class="btn-outline"><span data-tr>Hikâyemiz</span><span data-en>Our Story</span> <span class="arr">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container" id="etkinlikler">
+  <div class="sec-head reveal">
+    <div>
+      <span class="label-num"><span data-tr>04 · Takvim</span><span data-en>04 · Calendar</span></span>
+      <h2><span data-tr>Yaklaşan etkinlikler.</span><span data-en>Upcoming events.</span></h2>
+    </div>
+    <a href="#" class="all"><span data-tr>Tüm takvim</span><span data-en>Full calendar</span> <span class="arr">→</span></a>
+  </div>
+</section>
+
+<section class="events-section container">
+  <div class="reveal">
+    <div class="event-row">
+      <div class="event-date">18.06.26</div>
+      <h3><span data-tr>Kariyer Zirvesi 2026</span><span data-en>Career Summit 2026</span></h3>
+      <div class="place"><span data-tr>İstanbul · Hilton Bomonti · 09:00</span><span data-en>Istanbul · Hilton Bomonti · 09:00</span></div>
+      <div class="event-arrow">→</div>
+    </div>
+    <div class="event-row">
+      <div class="event-date">02.07.26</div>
+      <h3><span data-tr>Liderlik Atölyesi</span><span data-en>Leadership Workshop</span></h3>
+      <div class="place"><span data-tr>Ankara · JW Marriott · 14:00</span><span data-en>Ankara · JW Marriott · 14:00</span></div>
+      <div class="event-arrow">→</div>
+    </div>
+    <div class="event-row">
+      <div class="event-date">15.07.26</div>
+      <h3><span data-tr>Mezunlar Buluşması</span><span data-en>Alumni Meeting</span></h3>
+      <div class="place"><span data-tr>Online · Zoom · 19:00</span><span data-en>Online · Zoom · 19:00</span></div>
+      <div class="event-arrow">→</div>
+    </div>
+    <div class="event-row">
+      <div class="event-date">28.07.26</div>
+      <h3><span data-tr>Açık Eğitmen Söyleşisi</span><span data-en>Open Instructor Talk</span></h3>
+      <div class="place"><span data-tr>İzmir · Mistral Tower · 18:30</span><span data-en>Izmir · Mistral Tower · 18:30</span></div>
+      <div class="event-arrow">→</div>
+    </div>
+  </div>
+</section>
+
+<section class="container">
+  <div class="sec-head reveal">
+    <div>
+      <span class="label-num"><span data-tr>05 · Galeri</span><span data-en>05 · Gallery</span></span>
+      <h2><span data-tr>Akademiden kareler.</span><span data-en>Moments from the academy.</span></h2>
+    </div>
+    <a href="galeri.html" class="all"><span data-tr>Galeriye git</span><span data-en>Open gallery</span> <span class="arr">→</span></a>
+  </div>
+</section>
+
+<section class="gallery-preview container">
+  <div class="gp-grid reveal">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="cta-inner reveal">
+    <h2><span data-tr>Hayalindeki <strong>kariyere</strong> bir adım kaldı.</span><span data-en>One step to your <strong>dream career</strong>.</span></h2>
+    <div class="cta-inner-right">
+      <p data-tr>Başvuru formunu doldur, danışmanımız 24 saat içinde seninle iletişime geçsin.</p>
+      <p data-en>Fill the form, our advisor will reach out within 24 hours.</p>
+      <a href="egitim.html#basvuru" class="btn"><span data-tr>Başvuruyu Başlat</span><span data-en>Start Application</span> <span class="arr">→</span></a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo">akademi</a>
+      <p data-tr>Akademik kalitenin temel alındığı, sade ve odaklanmış bir öğrenme deneyimi.</p>
+      <p data-en>A simple, focused learning experience grounded in academic quality.</p>
+    </div>
+    <div class="footer-col">
+      <h5><span data-tr>Programlar</span><span data-en>Programs</span></h5>
+      <ul>
+        <li><a href="egitim.html">Liderlik & Yönetim</a></li>
+        <li><a href="egitim.html">Dijital Pazarlama</a></li>
+        <li><a href="egitim.html">Finans & Muhasebe</a></li>
+        <li><a href="egitim.html">İK & Organizasyon</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5><span data-tr>Akademi</span><span data-en>Academy</span></h5>
+      <ul>
+        <li><a href="#"><span data-tr>Hakkımızda</span><span data-en>About</span></a></li>
+        <li><a href="galeri.html"><span data-tr>Galeri</span><span data-en>Gallery</span></a></li>
+        <li><a href="#"><span data-tr>Etkinlikler</span><span data-en>Events</span></a></li>
+        <li><a href="#"><span data-tr>Blog</span><span data-en>Blog</span></a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5><span data-tr>İletişim</span><span data-en>Contact</span></h5>
+      <ul>
+        <li>info@akademi.com</li>
+        <li>+90 (212) 000 00 00</li>
+        <li><span data-tr>Levent · İstanbul</span><span data-en>Levent · Istanbul</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2026 akademi · <span data-tr>Tüm hakları saklıdır</span><span data-en>All rights reserved</span></div>
+    <a href="../index.html" class="back-to-showcase">← <span data-tr>Yön seçimine dön</span><span data-en>Back to picker</span></a>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

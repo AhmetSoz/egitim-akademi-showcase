@@ -1,0 +1,370 @@
+/* ============================================================
+   YÖN 7 — FERAH BENTO (Light Bento Box · Springy · Organic)
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: auto; }
+html, body { min-height: 100%; }
+
+:root {
+  --bg: #F4F6F8;
+  --surface: #FFFFFF;
+  --border: #E8EAED;
+  --text: #111827;
+  --text-soft: #6B7280;
+  
+  /* TR: Fresh Green */
+  --accent: #10B981;
+  --accent-light: #D1FAE5;
+  --accent-dark: #047857;
+}
+
+html[data-lang="en"] {
+  /* EN: Bright Yellow/Amber */
+  --accent: #F59E0B;
+  --accent-light: #FEF3C7;
+  --accent-dark: #B45309;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  transition: color 0.5s ease;
+}
+
+a { color: inherit; text-decoration: none; }
+button { cursor: pointer; border: none; background: none; font-family: inherit; color: inherit; }
+img { max-width: 100%; display: block; border-radius: inherit; }
+
+[data-tr], [data-en] { display: none; animation: langFade 0.4s ease forwards; }
+html[data-lang="tr"] [data-tr] { display: inline; }
+html[data-lang="en"] [data-en] { display: inline; }
+html[data-lang="tr"] [data-tr-block] { display: block; }
+html[data-lang="en"] [data-en-block] { display: block; }
+
+@keyframes langFade {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== PRELOADER ===== */
+.preloader {
+  position: fixed; inset: 0; z-index: 9999;
+  background: var(--bg);
+  display: grid; place-items: center;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+.preloader.hidden { opacity: 0; visibility: hidden; }
+.preloader-logo { width: 80px; height: 80px; fill: none; stroke: var(--accent); stroke-width: 5; stroke-linejoin: round; stroke-linecap: round; }
+.a-path { stroke-dasharray: 400; stroke-dashoffset: 400; animation: drawA 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
+@keyframes drawA { 100% { stroke-dashoffset: 0; fill: var(--accent); } }
+
+/* ===== SPRING REVEAL (Bento Animation) ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(60px) scale(0.9);
+  /* Bouncy spring effect */
+  transition: opacity 1s ease, transform 1s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.reveal.in { opacity: 1; transform: translateY(0) scale(1); }
+
+/* Layout & Utility */
+.container { max-width: 1400px; margin: 0 auto; padding: 0 32px; }
+h1, h2, h3, h4 { font-weight: 700; letter-spacing: -0.03em; line-height: 1.1; }
+h1 em, h2 em, h3 em { font-style: normal; color: var(--accent); }
+
+/* Bento Box Base */
+.bento {
+  background: var(--surface);
+  border-radius: 40px;
+  padding: 40px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.02);
+  border: 1px solid var(--border);
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease;
+}
+.bento.hoverable:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+}
+
+/* ===== NAV ===== */
+.nav { margin: 24px 32px; }
+.nav-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 32px; border-radius: 999px;
+  background: var(--surface); box-shadow: 0 4px 24px rgba(0,0,0,0.02); border: 1px solid var(--border);
+}
+.nav-logo { font-size: 24px; font-weight: 800; letter-spacing: -0.04em; }
+.nav-logo em { color: var(--accent); font-style: normal; }
+.nav-links { display: flex; gap: 8px; }
+.nav-links a {
+  padding: 12px 24px; font-size: 15px; font-weight: 600; color: var(--text-soft);
+  border-radius: 999px; transition: all 0.3s ease;
+}
+.nav-links a:hover, .nav-links a.active { background: var(--bg); color: var(--text); }
+.nav-actions { display: flex; align-items: center; gap: 16px; }
+.lang-toggle { display: flex; background: var(--bg); border-radius: 999px; padding: 6px; }
+.lang-toggle button {
+  padding: 8px 16px; border-radius: 999px; font-size: 14px; font-weight: 700; color: var(--text-soft); transition: 0.3s;
+}
+.lang-toggle button.active { background: var(--surface); color: var(--accent); box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+.nav-cta {
+  padding: 14px 28px; background: var(--text); color: var(--surface);
+  border-radius: 999px; font-size: 15px; font-weight: 700; transition: 0.3s;
+}
+.nav-cta:hover { background: var(--accent); transform: translateY(-2px); }
+
+/* ===== HERO (Bento Grid) ===== */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 24px;
+  margin-bottom: 24px;
+  padding: 0 32px;
+}
+.hero-main { grid-row: span 2; display: flex; flex-direction: column; justify-content: space-between; padding: 60px; }
+.hero-main h1 { font-size: clamp(48px, 6vw, 96px); margin-bottom: 24px; }
+.hero-main p { font-size: 20px; color: var(--text-soft); line-height: 1.6; max-width: 600px; }
+.hero-stat { display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+.hero-stat .num { font-size: 80px; font-weight: 800; color: var(--accent); line-height: 1; margin-bottom: 8px; }
+.hero-stat .label { font-size: 18px; font-weight: 600; color: var(--text-soft); }
+
+/* ===== ABOUT BENTO ===== */
+.about-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 24px; padding: 0 32px; margin-bottom: 120px; }
+.about-img {
+  background: var(--accent-light); position: relative; overflow: hidden;
+  display: grid; place-items: center; min-height: 300px;
+}
+.about-img::after {
+  content: ''; width: 120px; height: 120px; background: var(--accent); border-radius: 40px; transform: rotate(15deg);
+}
+.about-text { padding: 60px; display: flex; flex-direction: column; justify-content: center; }
+.about-text h2 { font-size: 48px; margin-bottom: 24px; }
+.about-text p { font-size: 18px; color: var(--text-soft); line-height: 1.7; }
+
+/* ===== TRAININGS ===== */
+.sec-title { text-align: center; font-size: 56px; margin-bottom: 48px; padding-top: 80px; }
+.trainings-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; padding: 0 32px; margin-bottom: 120px; }
+.train-card { padding: 32px; display: flex; flex-direction: column; }
+.train-img { aspect-ratio: 4/3; border-radius: 24px; background: var(--bg); margin-bottom: 24px; }
+.train-meta { font-size: 14px; font-weight: 800; color: var(--accent); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 16px; }
+.train-card h3 { font-size: 28px; margin-bottom: 12px; }
+.train-card p { font-size: 16px; color: var(--text-soft); line-height: 1.6; }
+
+/* ===== CTA ===== */
+.cta-wrap { padding: 0 32px; margin-bottom: 120px; }
+.cta-bento {
+  background: var(--accent); color: var(--surface); text-align: center; padding: 80px 40px;
+}
+.cta-bento h2 { font-size: 64px; color: var(--surface); margin-bottom: 24px; }
+.cta-bento p { font-size: 20px; color: rgba(255,255,255,0.9); margin-bottom: 40px; }
+.btn-white {
+  display: inline-block; padding: 20px 48px; background: var(--surface); color: var(--accent-dark);
+  border-radius: 999px; font-size: 18px; font-weight: 800; transition: 0.3s;
+}
+.btn-white:hover { transform: translateY(-4px) scale(1.05); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+
+/* ===== FOOTER ===== */
+.footer { border-top: 1px solid var(--border); padding: 80px 32px 40px; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 60px; margin-bottom: 60px; }
+.f-brand h4 { font-size: 32px; margin-bottom: 16px; }
+.f-brand h4 em { color: var(--accent); }
+.f-brand p { color: var(--text-soft); font-size: 16px; line-height: 1.6; max-width: 300px; }
+.f-col h5 { font-size: 14px; font-weight: 800; text-transform: uppercase; color: var(--text); margin-bottom: 24px; letter-spacing: 0.05em; }
+.f-col ul { list-style: none; display: flex; flex-direction: column; gap: 16px; }
+.f-col a { color: var(--text-soft); font-weight: 600; transition: 0.3s; }
+.f-col a:hover { color: var(--accent); }
+.footer-bot { display: flex; justify-content: space-between; border-top: 1px solid var(--border); padding-top: 32px; font-weight: 600; color: var(--text-soft); }
+
+/* ============================================================
+   EĞİTİM DETAY 
+   ============================================================ */
+.course-hero { text-align: center; padding: 60px 32px; }
+.course-hero .badge { display: inline-block; padding: 10px 24px; background: var(--accent-light); color: var(--accent-dark); border-radius: 999px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 24px; }
+.course-hero h1 { font-size: clamp(48px, 6vw, 88px); max-width: 900px; margin: 0 auto 24px; }
+.course-hero p { font-size: 22px; color: var(--text-soft); max-width: 700px; margin: 0 auto; line-height: 1.6; }
+
+.video-bento { margin: 0 32px 120px; padding: 16px; border-radius: 48px; }
+.video-inner { aspect-ratio: 16/9; background: var(--bg); border-radius: 32px; position: relative; cursor: pointer; transition: 0.3s; }
+.video-inner:hover { transform: scale(0.99); }
+.play-btn {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  width: 100px; height: 100px; background: var(--surface); border-radius: 50%;
+  display: grid; place-items: center; box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+.play-btn::after { content: ''; border-left: 24px solid var(--accent); border-top: 14px solid transparent; border-bottom: 14px solid transparent; margin-left: 8px; }
+
+.course-content { display: grid; grid-template-columns: 1fr 2fr; gap: 24px; padding: 0 32px; margin-bottom: 120px; align-items: start; }
+.course-content > div:first-child h2 { font-size: 48px; margin-bottom: 16px; }
+.modules { display: flex; flex-direction: column; gap: 16px; }
+.module { padding: 32px; display: flex; align-items: center; gap: 32px; }
+.module .num { font-size: 32px; font-weight: 800; color: var(--accent-light); }
+.module h4 { font-size: 24px; margin-bottom: 8px; }
+.module p { color: var(--text-soft); font-weight: 600; }
+
+.apply-bento { max-width: 800px; margin: 0 auto 120px; }
+.apply-bento h2 { font-size: 48px; text-align: center; margin-bottom: 40px; }
+.form { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.field { display: flex; flex-direction: column; gap: 12px; }
+.field.full { grid-column: span 2; }
+.field label { font-size: 14px; font-weight: 700; color: var(--text-soft); }
+.field input, .field select { padding: 20px 24px; border-radius: 20px; border: 2px solid var(--border); background: var(--bg); font-family: inherit; font-size: 16px; font-weight: 600; transition: 0.3s; outline: none; }
+.field input:focus { border-color: var(--accent); background: var(--surface); box-shadow: 0 0 0 4px var(--accent-light); }
+.submit-btn { grid-column: span 2; padding: 24px; background: var(--text); color: var(--surface); font-size: 18px; font-weight: 800; border-radius: 20px; transition: 0.3s; margin-top: 16px; }
+.submit-btn:hover { background: var(--accent); transform: translateY(-4px); }
+
+/* ===== GALERİ ===== */
+.galeri-bento { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; padding: 0 32px; margin-bottom: 120px; }
+.gal-item { aspect-ratio: 1; padding: 0; background: var(--accent-light); overflow: hidden; }
+
+@media (max-width: 1000px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-main { grid-row: auto; padding: 40px; }
+  .hero-main h1 { font-size: 48px; }
+  .about-grid, .trainings-grid, .course-content, .galeri-bento { grid-template-columns: 1fr; }
+  .form { grid-template-columns: 1fr; }
+  .field.full { grid-column: 1; }
+  .submit-btn { grid-column: 1; }
+  .footer-grid { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   FLOATING DOCK (Yön Seçimi + Açılışı İzle)
+   ============================================================ */
+.floating-dock {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 200;
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: dockShow 0.7s 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+@keyframes dockShow { to { opacity: 1; transform: translateY(0); } }
+
+.dock-btn {
+  padding: 11px 18px !important;
+  background: var(--text, #111) !important;
+  color: var(--bg, #fff) !important;
+  border: none !important;
+  border-radius: 999px !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.04em !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+  text-transform: none !important;
+  white-space: nowrap;
+  transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1) !important;
+  box-shadow: 0 12px 28px -10px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.06) inset !important;
+}
+.dock-btn:hover {
+  transform: translateY(-3px);
+  background: var(--accent, #888) !important;
+  box-shadow: 0 18px 36px -12px var(--accent, #888), 0 0 0 1px rgba(255,255,255,0.1) inset !important;
+}
+.dock-btn .rp-ico {
+  display: inline-flex;
+  width: 18px; height: 18px;
+  align-items: center; justify-content: center;
+  background: var(--accent, #888);
+  color: var(--text, #111);
+  border-radius: 50%;
+  font-size: 10px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+.dock-replay .rp-ico { font-size: 8px; padding-left: 1px; }
+.dock-btn:hover .rp-ico {
+  background: var(--bg, #fff);
+  color: var(--accent, #888);
+}
+.dock-back .arr-back {
+  font-size: 13px;
+  transition: transform 0.3s ease;
+}
+.dock-back:hover .arr-back { transform: translateX(-3px); }
+
+.rp-tr, .rp-en { display: none; }
+html[data-lang="tr"] .rp-tr { display: inline; }
+html[data-lang="en"] .rp-en { display: inline; }
+
+@media (max-width: 600px) {
+  .floating-dock { bottom: 16px; right: 16px; gap: 8px; }
+  .dock-btn { padding: 9px 14px !important; font-size: 11px !important; }
+  .dock-btn .rp-ico { width: 16px; height: 16px; }
+}
+
+/* ============================================================
+   BENTO REVEAL PRELOADER (YÖN 7)
+   ============================================================ */
+.bento-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  transition: opacity 0.8s ease;
+}
+.bento-loader.exit {
+  opacity: 0;
+}
+.bl-bg {
+  position: absolute;
+  inset: 0;
+  background: #FFFFFF;
+  z-index: 1;
+  transition: transform 1.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+.bento-loader.exit .bl-bg {
+  transform: translateY(-100%);
+}
+
+.bl-box {
+  position: relative;
+  z-index: 2;
+  width: 80px;
+  height: 80px;
+  background: var(--accent);
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 800;
+  font-size: 32px;
+  box-shadow: 0 20px 40px rgba(16,185,129,0.3);
+  transform: translateY(-50px) scale(0);
+  animation: blBounceIn 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  transition: all 0.8s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.bento-loader.exit .bl-box {
+  transform: scale(20);
+  opacity: 0;
+}
+
+@keyframes blBounceIn {
+  0% {
+    transform: translateY(-50px) scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="tr" data-lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Galeri — Akademi · Minimal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="loader" id="loader"><div class="loader-line-h"></div><div class="loader-counter-big"><span id="loaderCount">0</span><i>/100</i></div><div class="loader-tag-l">akademi · 01</div><div class="loader-tag-r">26 · 05 · 2026</div></div>
+<div class="scroll-progress" id="scrollProgress"></div>
+<div class="bg-grid"></div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">akademi</a>
+    <nav class="nav-links">
+      <a href="index.html"><span data-tr>Anasayfa</span><span data-en>Home</span></a>
+      <a href="egitim.html"><span data-tr>Eğitimler</span><span data-en>Trainings</span></a>
+      <a href="galeri.html" class="active"><span data-tr>Galeri</span><span data-en>Gallery</span></a>
+      <a href="index.html#etkinlikler"><span data-tr>Etkinlikler</span><span data-en>Events</span></a>
+    </nav>
+    <div class="nav-actions">
+      <div class="lang-toggle">
+        <button data-set-lang="tr">TR</button>
+        <button data-set-lang="en">EN</button>
+      </div>
+      <a href="egitim.html#basvuru" class="nav-cta"><span data-tr>Başvur</span><span data-en>Apply</span> →</a>
+    </div>
+  </div>
+</header>
+
+<section class="gallery-hero container">
+  <span class="label-num reveal"><span data-tr>Galeri · 06</span><span data-en>Gallery · 06</span></span>
+  <h1 class="reveal">
+    <span data-tr>Akademiden <strong>kareler.</strong></span>
+    <span data-en>Moments from <strong>the academy.</strong></span>
+  </h1>
+  <div class="gallery-hero-grid reveal">
+    <p data-tr>Eğitimlerimizden, etkinliklerimizden, mezuniyetlerimizden ve atölye çalışmalarımızdan seçtiğimiz kareler. Akademinin atmosferine bir bakış.</p>
+    <p data-en>Selected moments from our trainings, events, graduations, and workshops. A glimpse into the academy's atmosphere.</p>
+    <div class="gallery-hero-stats">
+      <div class="ghs-item"><div class="num"><strong>240</strong></div><div class="label"><span data-tr>fotoğraf</span><span data-en>photos</span></div></div>
+      <div class="ghs-item"><div class="num"><strong>32</strong></div><div class="label"><span data-tr>etkinlik</span><span data-en>events</span></div></div>
+      <div class="ghs-item"><div class="num"><strong>2026</strong></div><div class="label"><span data-tr>arşiv</span><span data-en>archive</span></div></div>
+    </div>
+  </div>
+
+  <div class="filter-bar reveal">
+    <button class="filter-btn active"><span data-tr>Tümü</span><span data-en>All</span></button>
+    <button class="filter-btn"><span data-tr>Eğitimler</span><span data-en>Trainings</span></button>
+    <button class="filter-btn"><span data-tr>Etkinlikler</span><span data-en>Events</span></button>
+    <button class="filter-btn"><span data-tr>Mezuniyet</span><span data-en>Graduation</span></button>
+    <button class="filter-btn"><span data-tr>Atölyeler</span><span data-en>Workshops</span></button>
+    <button class="filter-btn"><span data-tr>Kampüs</span><span data-en>Campus</span></button>
+  </div>
+</section>
+
+<section class="gallery-section container">
+  <div class="gallery-grid">
+    <div class="gallery-item gi-large gi-1 reveal">
+      <div class="gi-caption"><span data-tr>Açılış konferansı</span><span data-en>Opening conference</span><span class="meta"><span data-tr>Kasım 2025 · İstanbul</span><span data-en>November 2025 · Istanbul</span></span></div>
+    </div>
+    <div class="gallery-item gi-medium gi-2 reveal">
+      <div class="gi-caption"><span data-tr>Liderlik atölyesi</span><span data-en>Leadership workshop</span><span class="meta"><span data-tr>Eğitim · 2025</span><span data-en>Training · 2025</span></span></div>
+    </div>
+    <div class="gallery-item gi-tall gi-3 reveal">
+      <div class="gi-caption"><span data-tr>Mezuniyet töreni</span><span data-en>Graduation ceremony</span><span class="meta"><span data-tr>2024 mezunları</span><span data-en>Class of 2024</span></span></div>
+    </div>
+    <div class="gallery-item gi-medium gi-4 reveal">
+      <div class="gi-caption"><span data-tr>Pazarlama vakası</span><span data-en>Marketing case</span><span class="meta">2025</span></div>
+    </div>
+    <div class="gallery-item gi-small gi-5 reveal">
+      <div class="gi-caption"><span data-tr>Sınıf içi</span><span data-en>Classroom</span><span class="meta">2026</span></div>
+    </div>
+    <div class="gallery-item gi-square gi-6 reveal">
+      <div class="gi-caption"><span data-tr>Mezunlar buluşması</span><span data-en>Alumni gathering</span><span class="meta">2025</span></div>
+    </div>
+    <div class="gallery-item gi-wide gi-7 reveal">
+      <div class="gi-caption"><span data-tr>Kariyer Zirvesi</span><span data-en>Career Summit</span><span class="meta">2025</span></div>
+    </div>
+    <div class="gallery-item gi-small gi-8 reveal">
+      <div class="gi-caption"><span data-tr>Akademi binası</span><span data-en>Academy building</span><span class="meta"><span data-tr>Levent</span><span data-en>Levent</span></span></div>
+    </div>
+    <div class="gallery-item gi-tall gi-9 reveal">
+      <div class="gi-caption"><span data-tr>Eğitmen sohbetleri</span><span data-en>Instructor talks</span><span class="meta">2026</span></div>
+    </div>
+    <div class="gallery-item gi-square gi-1 reveal">
+      <div class="gi-caption"><span data-tr>Strateji atölyesi</span><span data-en>Strategy workshop</span><span class="meta">2025</span></div>
+    </div>
+    <div class="gallery-item gi-medium gi-2 reveal">
+      <div class="gi-caption"><span data-tr>Finans semineri</span><span data-en>Finance seminar</span><span class="meta">2025</span></div>
+    </div>
+    <div class="gallery-item gi-wide gi-4 reveal">
+      <div class="gi-caption"><span data-tr>İK Liderler</span><span data-en>HR Leaders</span><span class="meta">2025</span></div>
+    </div>
+  </div>
+
+  <button class="load-more reveal"><span data-tr>Daha fazla yükle</span><span data-en>Load more</span> →</button>
+</section>
+
+<section class="cta-section">
+  <div class="cta-inner reveal">
+    <h2><span data-tr>Bir <strong>kareye</strong> sen de katıl.</span><span data-en>Be in the next <strong>frame</strong>.</span></h2>
+    <div class="cta-inner-right">
+      <p data-tr>Akademimizin parçası ol — programlarımızı keşfet, başvurunu yap.</p>
+      <p data-en>Become part of our academy — explore our programs, apply.</p>
+      <a href="egitim.html#basvuru" class="btn"><span data-tr>Başvur</span><span data-en>Apply</span> <span class="arr">→</span></a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo">akademi</a>
+      <p data-tr>Akademik kalitenin temel alındığı, sade ve odaklanmış bir öğrenme deneyimi.</p>
+      <p data-en>A simple, focused learning experience.</p>
+    </div>
+    <div class="footer-col">
+      <h5><span data-tr>Programlar</span><span data-en>Programs</span></h5>
+      <ul>
+        <li><a href="egitim.html">Liderlik & Yönetim</a></li>
+        <li><a href="egitim.html">Dijital Pazarlama</a></li>
+        <li><a href="egitim.html">Finans & Muhasebe</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5><span data-tr>Akademi</span><span data-en>Academy</span></h5>
+      <ul>
+        <li><a href="#"><span data-tr>Hakkımızda</span><span data-en>About</span></a></li>
+        <li><a href="galeri.html"><span data-tr>Galeri</span><span data-en>Gallery</span></a></li>
+        <li><a href="#"><span data-tr>Etkinlikler</span><span data-en>Events</span></a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5><span data-tr>İletişim</span><span data-en>Contact</span></h5>
+      <ul>
+        <li>info@akademi.com</li>
+        <li>+90 (212) 000 00 00</li>
+        <li><span data-tr>Levent · İstanbul</span><span data-en>Levent · Istanbul</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2026 akademi</div>
+    <a href="../index.html" class="back-to-showcase">← <span data-tr>Yön seçimine dön</span><span data-en>Back to picker</span></a>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
